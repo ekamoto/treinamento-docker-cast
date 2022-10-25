@@ -14,7 +14,7 @@ services:
       MYSQL_PASSWORD: Senha-321&
     volumes:
       - type: bind
-        source: C:\Users\Castsup\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu20.04LTS_79rhkp1fndgsc\LocalState\rootfs\home\ekamoto\aula7\mysql\mysql-volume
+        source: "${VOLUME_MYSQL}"
         target: /var/lib/mysql
   app:
     container_name: sw3
@@ -25,7 +25,7 @@ services:
       - "3000:3000"
     volumes:
       - type: bind
-        source: C:\Users\Castsup\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu20.04LTS_79rhkp1fndgsc\LocalState\rootfs\home\ekamoto\aula7\app\logs
+        source: "${LOGS}"
         target: /usr/src/app/logs
     depends_on:
       - mysql_db
