@@ -1,0 +1,17 @@
+{
+    "name": "app-front-end",
+    "version": "1.0.0",
+    "description": "App treinamento infra",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \" Olá, TODO: Implementar testes\" exit 1"
+    },
+    "author": "Leandro Shindi Ekamoto",
+    "repository": "https://github.com/ekamoto/FastFourierTransform",
+    "license": "ISC",
+    "dependencies": {
+        "express": "4.17.1",
+        "mysql": ">=2.5.0"
+    }
+  }
+  

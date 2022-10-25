@@ -1,0 +1,34 @@
+version: "3.9"  
+services:
+  mysql_db:
+    container_name: mysql
+    image: ekamoto/mysql:1.0
+    networks:
+      - app-sisaud-network
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: Senha-321&
+      MYSQL_DATABASE: sisaud-db
+      MYSQL_USER: sisaud
+      MYSQL_PASSWORD: Senha-321&
+    volumes:
+      - type: bind
+        source: C:\Users\Castsup\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu20.04LTS_79rhkp1fndgsc\LocalState\rootfs\home\ekamoto\aula7\mysql\mysql-volume
+        target: /var/lib/mysql
+  app:
+    container_name: sw3
+    image: ekamoto/app:1.0  
+    networks:
+      - app-sisaud-network
+    ports:
+      - "3000:3000"
+    volumes:
+      - type: bind
+        source: C:\Users\Castsup\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu20.04LTS_79rhkp1fndgsc\LocalState\rootfs\home\ekamoto\aula7\app\logs
+        target: /usr/src/app/logs
+    depends_on:
+      - mysql_db
+networks:
+  app-sisaud-network:
+    driver: bridge
