@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
     });
  
     connection.connect()
-    connection.query('SELECT * from Usuario', (err, rows, fields) => {
+    connection.query('SELECT * from usuario', (err, rows, fields) => {
         if (err) throw err
  
         console.log('The solution is: ', rows);
