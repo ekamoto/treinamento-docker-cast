@@ -18,7 +18,7 @@ services:
         target: /var/lib/mysql
   app:
     container_name: sw3
-    image: ekamoto/app:1.0  
+    image: ekamoto/app:1.0
     networks:
       - app-sisaud-network
     ports:

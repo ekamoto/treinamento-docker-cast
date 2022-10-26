@@ -1,2 +1,9 @@
-Para rodar a aplicação execute
-.\startapp.sh
+Para rodar a aplicação utilizando Docker Desktop execute
+https://www.docker.com/products/docker-desktop/
+
+.\startapp-docker-desktop.sh
+
+Para rodar a aplicação utilizando Rancher Desktop execute(Não utilize ainda, estou configurando para essa opção)
+https://rancherdesktop.io/
+
+.\startapp-rancher-desktop.sh
